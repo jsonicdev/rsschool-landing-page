@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #e1d4c9;
+}
+
+.wrapper-container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.header__menu {
+	display: flex;
+	margin: 20px 40px 0 40px;
+	justify-content: space-between;
+}
+
+.navbar__container {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+}
+.navbar__container li a {
+	text-decoration: none;
+	color: black;
+}
+
+/* Header /
