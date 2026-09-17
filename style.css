@@ -126,14 +126,33 @@ body {
 .coffee__menu {
 	display: flex;
 	align-items: center;
+	flex-direction: row;
 	gap: 8px;
+	cursor: pointer;
 }
+
 .coffee__menu h2 {
 	font-family: var(--font-family);
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 150%;
 	color: var(--text-primary);
+}
+.coffee__menu a {
+	display: flex;
+	text-decoration: none;
+	gap: 10px;
+	padding-bottom: 5px;
+
+	/* анимация */
+	background: linear-gradient(var(--text-primary), var(--text-primary)) bottom
+		left / 0% 3px no-repeat;
+
+	transition: background-size 0.3s ease;
+}
+
+.coffee__menu a:hover {
+	background-size: 100% 2px;
 }
 
 .header__hero {
@@ -174,8 +193,9 @@ body {
 	color: var(--text-inverse);
 	background-color: transparent;
 	padding-top: 40px;
+	margin-bottom: 60px;
 }
-.hero__container button {
+.hero__container a {
 	margin-top: 40px;
 	border-radius: 100px;
 	padding: 20px 78px;
@@ -191,6 +211,7 @@ body {
 	color: var(--text-primary);
 	cursor: pointer;
 	background: var(--text-inverse);
+	text-decoration: none;
 }
 /* Header /
 
