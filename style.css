@@ -500,3 +500,18 @@ body {
 .footer__address svg {
 	margin-right: 8px;
 }
+
+/* PAGE MENU */
+
+.menu__title h2 {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 60px;
+	line-height: 125%;
+	text-align: center;
+	color: var(--text-primary);
+}
+.menu__title span {
+	font-style: italic;
+	color: var(--text-accent);
+}
