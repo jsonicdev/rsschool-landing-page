@@ -141,7 +141,7 @@
 	width: 1360px;
 	height: 644px;
 	max-width: 1360px;
-	background-image: url('./assets/img/img-hero.png');
+	background-image: url('./assets/img/hero.gif');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -266,4 +266,64 @@
 	margin-top: 40px;
 	justify-content: center;
 	gap: 12px;
+}
+
+.about__container {
+	margin-top: 100px;
+}
+.about__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.about__title {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 59px;
+	line-height: 125%;
+	color: var(--text-primary);
+}
+.about__title span {
+	font-style: italic;
+	color: var(--text-accent);
+}
+
+.about__pics {
+	display: flex;
+	margin-top: 40px;
+	gap: 40px;
+}
+
+.about__pics img {
+	object-fit: cover;
+}
+.about__pics-left {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.about__pics-right {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.left__1 {
+	border-radius: 20px;
+	width: 660px;
+	height: 590px;
+}
+.left__2 {
+	border-radius: 20px;
+	width: 660px;
+	height: 430px;
+}
+.right__1 {
+	border-radius: 20px;
+	width: 660px;
+	height: 430px;
+}
+.right__2 {
+	border-radius: 20px;
+	width: 660px;
+	height: 590px;
 }
