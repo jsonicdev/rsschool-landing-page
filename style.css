@@ -327,3 +327,76 @@
 	width: 660px;
 	height: 590px;
 }
+
+.mobileapp__container {
+	margin-top: 100px;
+}
+.mobileapp__content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 120px;
+}
+.mobileapp__titles {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.mobileapp__download {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-style: italic;
+	font-size: 61px;
+	line-height: 125%;
+	color: var(--text-primary);
+}
+.mobileapp__download span {
+	color: var(--text-accent);
+}
+.mobileapp__download-desc {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: var(--text-primary);
+}
+.download__buttons {
+	display: flex;
+	gap: 20px;
+}
+.download__appstore {
+	display: flex;
+	border: 1px solid var(--background-container);
+	border-radius: 100px;
+	padding: 12px 20px;
+	width: 200px;
+	height: 64px;
+}
+.download__android {
+	display: flex;
+	border: 1px solid var(--background-container);
+	border-radius: 100px;
+	padding: 12px 20px;
+	width: 200px;
+	height: 64px;
+}
+.download__appstore svg {
+	margin-right: 15px;
+}
+.download__android svg {
+	margin-right: 8px;
+}
+.download__top {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 10px;
+	line-height: 140%;
+	color: var(--text-primary);
+}
+.download__low {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+	color: var(--text-primary);
+}
