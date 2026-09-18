@@ -99,6 +99,16 @@ body {
 	font-family: 'Inter', sans-serif;
 	line-height: 150%;
 }
+.navbar__container li {
+	padding-bottom: 5px;
+	background: linear-gradient(var(--text-primary), var(--text-primary)) bottom
+		left / 0% 3px no-repeat;
+
+	transition: background-size 0.3s ease;
+}
+.navbar__container li:hover {
+	background-size: 100% 2px;
+}
 .navbar__container li a {
 	text-decoration: none;
 	color: black;
@@ -122,6 +132,7 @@ body {
 	gap: 6px;
 	width: 88px;
 	height: 44px;
+	cursor: pointer;
 }
 .coffee__menu {
 	display: flex;
@@ -196,26 +207,41 @@ body {
 	color: var(--text-inverse);
 	background-color: transparent;
 	padding-top: 40px;
-	margin-bottom: 60px;
+	margin-bottom: 41px;
 }
-.hero__container a {
+.menu__btn-container {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
 	margin-top: 40px;
 	border-radius: 100px;
-	padding: 20px 78px;
+	padding: 20px 50px 20px 67px;
 	max-width: 200px;
 	max-height: 64px;
-	text-align: none;
 	border: 0;
 	font-family: var(--font-family);
+	cursor: pointer;
+	background: var(--text-inverse);
+	text-decoration: none;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 150%;
 	text-align: center;
 	color: var(--text-primary);
-	cursor: pointer;
-	background: var(--text-inverse);
-	text-decoration: none;
 }
+
+.menu__btn-svg {
+	visibility: hidden;
+	opacity: 0;
+	transition:
+		opacity 0.3s ease,
+		visibility 0.3s ease;
+}
+.menu__btn-container:hover .menu__btn-svg {
+	visibility: visible;
+	opacity: 1;
+}
+
 /* Header /
 
 /* Main */
@@ -280,6 +306,15 @@ body {
 	width: 60px;
 	height: 60px;
 	padding: 22px;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+.btn__left-dark:hover {
+	background: var(--background-container);
+	transition: background-color 0.3s ease;
+}
+.btn__left-dark:hover path {
+	stroke: var(--text-inverse);
 }
 .btn__right-dark {
 	border: 1px solid var(--background-container);
@@ -287,6 +322,15 @@ body {
 	width: 60px;
 	height: 60px;
 	padding: 22px;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+.btn__right-dark:hover {
+	background: var(--background-container);
+	transition: background-color 0.3s ease;
+}
+.btn__right-dark:hover path {
+	stroke: var(--text-inverse);
 }
 .hero__pagination {
 	display: flex;
@@ -398,6 +442,24 @@ body {
 	padding: 12px 20px;
 	width: 200px;
 	height: 64px;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+.download__appstore:hover {
+	background: var(--background-container);
+	transition: background-color 0.3s ease;
+}
+.download__appstore:hover .download__top {
+	color: var(--text-inverse);
+	transition: color 0.3s ease;
+}
+.download__appstore:hover .download__low {
+	color: var(--text-inverse);
+	transition: color 0.3s ease;
+}
+.download__appstore:hover path {
+	fill: var(--text-inverse);
+	transition: fill 0.3s ease;
 }
 .download__android {
 	display: flex;
@@ -406,6 +468,8 @@ body {
 	padding: 12px 20px;
 	width: 200px;
 	height: 64px;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
 }
 .download__appstore svg {
 	margin-right: 15px;
@@ -426,6 +490,22 @@ body {
 	font-size: 16px;
 	line-height: 150%;
 	color: var(--text-primary);
+}
+.download__android:hover {
+	background: var(--background-container);
+	transition: background-color 0.3s ease;
+}
+.download__android:hover .download__top {
+	color: var(--text-inverse);
+	transition: color 0.3s ease;
+}
+.download__android:hover .download__low {
+	color: var(--text-inverse);
+	transition: color 0.3s ease;
+}
+.download__android:hover path {
+	fill: var(--text-inverse);
+	transition: fill 0.3s ease;
 }
 
 .footer {
@@ -469,7 +549,36 @@ body {
 	width: 60px;
 	height: 60px;
 	margin-right: 12px;
+	transition: background-color 0.3s ease;
 }
+.social__1:hover {
+	background: var(--text-inverse);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.social__1:hover path {
+	stroke: var(--text-primary);
+	transition: stroke 0.3s ease;
+}
+.social__2:hover {
+	background: var(--text-inverse);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.social__2:hover path {
+	stroke: var(--text-primary);
+	transition: stroke 0.3s ease;
+}
+.social__3:hover {
+	background: var(--text-inverse);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.social__3:hover path {
+	stroke: var(--text-primary);
+	transition: stroke 0.3s ease;
+}
+
 .footer__content-right {
 	margin-top: 30px;
 }
@@ -496,9 +605,17 @@ body {
 	font-size: 16px;
 	line-height: 150%;
 	color: var(--text-inverse);
+	cursor: pointer;
 }
 .footer__address svg {
 	margin-right: 8px;
+}
+.footer__address div {
+	padding-bottom: 5px;
+}
+.footer__address div:hover {
+	border-bottom: 2px solid var(--border-primary);
+	transition: border 0.3s ease;
 }
 
 /* PAGE MENU */
@@ -562,12 +679,24 @@ body {
 	font-size: 16px;
 	line-height: 150%;
 	color: var(--text-primary);
+	transition: background-color 0.3s ease;
+}
+.tea__btn:hover {
+	background: var(--background-container);
+	color: var(--text-inverse);
+	border: 1px solid var(--background-container);
+	transition: background-color 0.3s ease;
 }
 .tea__btn img {
 	border-radius: 100px;
 	padding: 7px;
 	background: var(--border-primary);
 	margin-right: 8px;
+	transition: background-color 1s ease;
+}
+.tea__btn:hover img {
+	background: var(--text-inverse);
+	transition: background-color 0.3s ease;
 }
 .dessert__btn {
 	display: flex;
@@ -584,12 +713,24 @@ body {
 	line-height: 150%;
 	color: var(--text-primary);
 	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+.dessert__btn:hover {
+	background: var(--background-container);
+	color: var(--text-inverse);
+	border: 1px solid var(--background-container);
+	transition: background-color 0.3s ease;
 }
 .dessert__btn img {
 	border-radius: 100px;
 	padding: 7px;
 	background: var(--border-primary);
 	margin-right: 8px;
+	transition: background-color 1s ease;
+}
+.dessert__btn:hover img {
+	background: var(--text-inverse);
+	transition: background-color 0.3s ease;
 }
 
 /* MENU GRID */
@@ -653,4 +794,23 @@ body {
 	font-size: 24px;
 	line-height: 125%;
 	color: var(--text-primary);
+}
+
+/* THEME ANI */
+
+.night__svg rect {
+	fill: transparent;
+	transition: fill 0.3s ease;
+}
+.night__svg path {
+	fill: #403f3d;
+	transition: fill 0.3s ease;
+}
+.theme__switch:hover .night__svg path {
+	fill: #e1d4c9;
+	transition: fill 0.5s;
+}
+.theme__switch:hover .night__svg rect {
+	fill: #665f55;
+	transition: fill 0.5s;
 }
