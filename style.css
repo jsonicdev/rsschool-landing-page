@@ -596,20 +596,39 @@ body {
 .menu__grid {
 	margin-top: 40px;
 }
+.menu__grid-container {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.menu__grid-top {
+	display: flex;
+	gap: 40px;
+}
+.menu__grid-low {
+	display: flex;
+	gap: 40px;
+}
+
 .coffee__1-container {
+	display: flex;
+	flex-direction: column;
 	border: 1px solid var(--border-primary);
 	border-radius: 40px;
 	max-width: 310px;
 	max-height: 506px;
 }
 .coffee__1-container img {
-	width: 100%;
-	height: 100%;
+	width: 310px;
+	height: 310px;
 	object-fit: cover;
 	border-radius: 38px;
 }
 .coffee__1-desc {
+	display: flex;
 	padding: 20px;
+	flex: 1;
+	flex-direction: column;
 }
 .coffee__1-desc h4 {
 	font-family: var(--font-family);
@@ -625,9 +644,10 @@ body {
 	font-size: 16px;
 	line-height: 150%;
 	color: var(--text-primary);
-	margin-bottom: 12px;
+	margin-bottom: auto;
 }
 .coffee__1-desc span {
+	margin-top: 10px;
 	font-family: var(--font-family);
 	font-weight: 600;
 	font-size: 24px;
