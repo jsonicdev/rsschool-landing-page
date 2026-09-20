@@ -71,9 +71,24 @@
 	--dark-bg-modal: var(--dark-bg-container);
 	--dark-bg-modal-control: var(--dark-bg-page);
 }
+.dark {
+	--text-primary: var(--dark-text-primary);
+	--text-inverse: var(--dark-text-inverse);
+	--text-accent: var(--dark-text-accent);
+	--background-page: var(--dark-bg-page);
+	--background-container: var(--dark-bg-container);
+	--background-overlay: var(--dark-bg-overlay);
+	--border-primary: var(--dark-border-primary);
+	--border-inverse: var(--dark-border-inverse);
+	--background-modal: var(--dark-bg-container);
+	--background-modal-control: var(--dark-bg-page);
+}
 
 body {
-	background-color: #e1d4c9;
+	background-color: var(--background-page);
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
 }
 .wrapper-container {
 	max-width: 1440px;
@@ -86,6 +101,9 @@ body {
 .header__menu {
 	display: flex;
 	justify-content: space-between;
+}
+.header__logo path {
+	fill: var(--text-primary);
 }
 
 .header__navbar {
@@ -112,7 +130,7 @@ body {
 }
 .navbar__container li a {
 	text-decoration: none;
-	color: black;
+	color: var(--text-primary);
 }
 .navbar__container li:nth-child(1),
 .navbar__container li:nth-child(2),
@@ -126,7 +144,7 @@ body {
 }
 .theme__switch {
 	display: flex;
-	border: 1px solid #c1b6ad;
+	border: 1px solid var(--border-primary);
 	border-radius: 100px;
 	margin-top: 8px;
 	padding: 6px;
@@ -161,6 +179,9 @@ body {
 		left / 0% 3px no-repeat;
 
 	transition: background-size 0.3s ease;
+}
+.dark .menu-link path {
+	stroke: var(--text-inverse);
 }
 
 .menu-link:hover {
@@ -219,10 +240,9 @@ body {
 	padding: 20px 50px 20px 67px;
 	max-width: 200px;
 	max-height: 64px;
-	border: 0;
-	font-family: var(--font-family);
 	cursor: pointer;
-	background: var(--text-inverse);
+	font-family: var(--font-family);
+	background: var(--background-page);
 	text-decoration: none;
 	font-weight: 600;
 	font-size: 16px;
@@ -231,6 +251,9 @@ body {
 	color: var(--text-primary);
 }
 
+.dark .menu__btn-svg path {
+	stroke: var(--text-inverse);
+}
 .menu__btn-svg {
 	visibility: hidden;
 	opacity: 0;
@@ -310,6 +333,17 @@ body {
 	transition: background-color 0.3s ease;
 	cursor: pointer;
 }
+.dark .btn__left-dark {
+	border: 1px solid var(--dark-border-inverse);
+}
+.dark .btn__left-dark path {
+	stroke: var(--dark-border-inverse);
+}
+.dark .btn__left-dark:hover {
+	border: 1px solid var(--dark-bg-container);
+	background: var(--dark-bg-container);
+	transition: background-color 0.3s ease;
+}
 .btn__left-dark:hover {
 	background: var(--background-container);
 	transition: background-color 0.3s ease;
@@ -325,6 +359,17 @@ body {
 	padding: 22px;
 	transition: background-color 0.3s ease;
 	cursor: pointer;
+}
+.dark .btn__right-dark {
+	border: 1px solid var(--dark-border-inverse);
+}
+.dark .btn__right-dark path {
+	stroke: var(--dark-border-inverse);
+}
+.dark .btn__right-dark:hover {
+	border: 1px solid var(--dark-bg-container);
+	background: var(--dark-bg-container);
+	transition: background-color 0.3s ease;
 }
 .btn__right-dark:hover {
 	background: var(--background-container);
@@ -473,6 +518,14 @@ body {
 	display: flex;
 	gap: 20px;
 }
+.dark .download__appstore {
+	border: 1px solid var(--dark-border-inverse);
+}
+.dark .download__appstore:hover {
+	border: 1px solid var(--dark-bg-container);
+	background: var(--dark-bg-container);
+	transition: background-color 0.3s ease;
+}
 .download__appstore {
 	display: flex;
 	border: 1px solid var(--background-container);
@@ -498,6 +551,18 @@ body {
 .download__appstore:hover path {
 	fill: var(--text-inverse);
 	transition: fill 0.3s ease;
+}
+.dark .download__appstore path {
+	fill: var(--dark-text-inverse);
+	transition: fill 0.3s ease;
+}
+.dark .download__android {
+	border: 1px solid var(--dark-border-inverse);
+}
+.dark .download__android:hover {
+	border: 1px solid var(--dark-bg-container);
+	background: var(--dark-bg-container);
+	transition: background-color 0.3s ease;
 }
 .download__android {
 	display: flex;
@@ -545,6 +610,10 @@ body {
 	fill: var(--text-inverse);
 	transition: fill 0.3s ease;
 }
+.dark .download__android path {
+	fill: var(--dark-text-inverse);
+	transition: fill 0.3s ease;
+}
 
 .footer {
 	border-radius: 40px;
@@ -580,6 +649,7 @@ body {
 	font-style: italic;
 	color: var(--text-accent);
 }
+
 .footer__socials svg {
 	border: 1px solid var(--border-primary);
 	border-radius: 100px;
@@ -588,6 +658,10 @@ body {
 	height: 60px;
 	margin-right: 12px;
 	transition: background-color 0.3s ease;
+}
+.dark .social__1:hover {
+	background: var(--dark-bg-page);
+	border: 1px solid var(--dark-bg-page);
 }
 .social__1:hover {
 	background: var(--text-inverse);
@@ -598,6 +672,10 @@ body {
 	stroke: var(--text-primary);
 	transition: stroke 0.3s ease;
 }
+.dark .social__2:hover {
+	background: var(--dark-bg-page);
+	border: 1px solid var(--dark-bg-page);
+}
 .social__2:hover {
 	background: var(--text-inverse);
 	cursor: pointer;
@@ -606,6 +684,10 @@ body {
 .social__2:hover path {
 	stroke: var(--text-primary);
 	transition: stroke 0.3s ease;
+}
+.dark .social__3:hover {
+	background: var(--dark-bg-page);
+	border: 1px solid var(--dark-bg-page);
 }
 .social__3:hover {
 	background: var(--text-inverse);
@@ -701,6 +783,9 @@ body {
 	background: var(--text-inverse);
 	margin-right: 8px;
 }
+.dark .coffee__btn img {
+	background: var(--dark-bg-page);
+}
 
 .tea__btn {
 	display: flex;
@@ -719,6 +804,9 @@ body {
 	color: var(--text-primary);
 	transition: background-color 0.3s ease;
 }
+.dark .tea__btn:hover {
+	background: var(--dark-bg-container);
+}
 .tea__btn:hover {
 	background: var(--background-container);
 	color: var(--text-inverse);
@@ -731,6 +819,10 @@ body {
 	background: var(--border-primary);
 	margin-right: 8px;
 	transition: background-color 1s ease;
+}
+.dark .tea__btn:hover img {
+	background: var(--dark-bg-page);
+	transition: background-color 0.3s ease;
 }
 .tea__btn:hover img {
 	background: var(--text-inverse);
@@ -753,6 +845,9 @@ body {
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
+.dark .dessert__btn:hover {
+	background: var(--dark-bg-container);
+}
 .dessert__btn:hover {
 	background: var(--background-container);
 	color: var(--text-inverse);
@@ -765,6 +860,10 @@ body {
 	background: var(--border-primary);
 	margin-right: 8px;
 	transition: background-color 1s ease;
+}
+.dark .dessert__btn:hover img {
+	background: var(--dark-bg-page);
+	transition: background-color 0.3s ease;
 }
 .dessert__btn:hover img {
 	background: var(--text-inverse);
@@ -800,13 +899,13 @@ body {
 	transition: background-size 0.4s ease;
 }
 .coffee__1-img {
-	width: 309px;
+	width: 308px;
 	height: 340px;
 	background-image: url('assets/img/coffee/coffee-1.jpg');
 	background-size: 110%;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 38px;
+	border-radius: 40px;
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__1-img {
@@ -845,13 +944,13 @@ body {
 }
 
 .coffee__2-img {
-	width: 309px;
+	width: 308px;
 	height: 309px;
 	background-image: url('assets/img/coffee/coffee-2.jpg');
 	background-size: 110%;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 38px;
+	border-radius: 40px;
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__2-img {
@@ -859,13 +958,13 @@ body {
 	transition: background-size 0.4s ease;
 }
 .coffee__3-img {
-	width: 309px;
+	width: 308px;
 	height: 309px;
 	background-image: url('assets/img/coffee/coffee-3.jpg');
 	background-size: 110%;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 38px;
+	border-radius: 40px;
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__3-img {
@@ -873,13 +972,13 @@ body {
 	transition: background-size 0.4s ease;
 }
 .coffee__4-img {
-	width: 309px;
+	width: 308px;
 	height: 309px;
 	background-image: url('assets/img/coffee/coffee-4.jpg');
 	background-size: 110%;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 38px;
+	border-radius: 40px;
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__4-img {
@@ -887,13 +986,13 @@ body {
 	transition: background-size 0.4s ease;
 }
 .coffee__5-img {
-	width: 309px;
+	width: 308px;
 	height: 309px;
 	background-image: url('assets/img/coffee/coffee-5.jpg');
 	background-size: 110%;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 38px;
+	border-radius: 40px;
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__5-img {
@@ -901,13 +1000,13 @@ body {
 	transition: background-size 0.4s ease;
 }
 .coffee__6-img {
-	width: 309px;
+	width: 308px;
 	height: 309px;
 	background-image: url('assets/img/coffee/coffee-6.jpg');
 	background-size: 110%;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 38px;
+	border-radius: 40px;
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__6-img {
@@ -915,13 +1014,13 @@ body {
 	transition: background-size 0.4s ease;
 }
 .coffee__7-img {
-	width: 309px;
+	width: 308px;
 	height: 309px;
 	background-image: url('assets/img/coffee/coffee-7.jpg');
 	background-size: 110%;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 38px;
+	border-radius: 40px;
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__7-img {
@@ -929,13 +1028,13 @@ body {
 	transition: background-size 0.4s ease;
 }
 .coffee__8-img {
-	width: 309px;
+	width: 308px;
 	height: 309px;
 	background-image: url('assets/img/coffee/coffee-8.jpg');
 	background-size: 110%;
 	background-position: center;
 	background-repeat: no-repeat;
-	border-radius: 38px;
+	border-radius: 40px;
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__8-img {
@@ -949,14 +1048,53 @@ body {
 	transition: fill 0.3s ease;
 }
 .night__svg path {
-	fill: #403f3d;
+	fill: var(--text-primary);
 	transition: fill 0.3s ease;
 }
 .theme__switch:hover .night__svg path {
-	fill: #e1d4c9;
+	fill: var(--background-page);
 	transition: fill 0.5s;
 }
 .theme__switch:hover .night__svg rect {
-	fill: #665f55;
+	fill: var(--background-container);
+	transition: fill 0.5s;
+}
+
+.light__svg rect {
+	transition: fill 0.3s ease;
+}
+.lgiht__svg path {
+	fill: var(--text-primary);
+	transition: fill 0.3s ease;
+}
+
+.dark .light__svg rect {
+	fill: transparent;
+	transition: fill 0.3s ease;
+}
+.dark .theme__switch:hover .light__svg path {
+	fill: var(--text-primary);
+	transition: fill 0.5s;
+}
+.dark .theme__switch:hover .light__svg rect {
+	fill: var(--dark-bg-container);
+	transition: fill 0.5s;
+}
+
+.dark .theme__switch:hover .night__svg path {
+	fill: #e1d4c9;
+	transition: fill 0.5s;
+}
+.dark .theme__switch:hover .night__svg rect {
+	fill: #b0907a;
+	transition: fill 0.5s;
+}
+
+.dark .night__svg path {
+	fill: #e1d4c9;
+	transition: fill 0.5s;
+}
+.dark .night__svg rect {
+	fill: #b0907a;
 	transition: fill 0.5s;
 }
