@@ -4,6 +4,9 @@
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
+.no-scroll {
+	overflow: hidden;
+}
 
 /* Fonts */
 @font-face {
@@ -296,6 +299,12 @@ body {
 .slider__content {
 	text-align: center;
 }
+.slide {
+	display: none;
+}
+.slide.active {
+	display: block;
+}
 .slider__content h3 {
 	font-family: var(--font-family);
 	font-weight: 600;
@@ -382,6 +391,10 @@ body {
 	margin-top: 40px;
 	justify-content: center;
 	gap: 12px;
+	cursor: pointer;
+}
+.dot.active rect {
+	fill: #665f55;
 }
 
 .about__container {
