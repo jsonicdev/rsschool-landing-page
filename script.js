@@ -10,7 +10,112 @@ const dots = document.querySelectorAll('.dot')
 const prev = document.querySelector('.prev')
 const next = document.querySelector('.next')
 
+const cardContainer = document.querySelector('.menu__grid-container')
+
+const coffeeBtn = document.getElementById('coffeeBtn')
+const teaBtn = document.getElementById('teaBtn')
+const dessertBtn = document.getElementById('dessertBtn')
+
 let currentSlider = 0
+let products = []
+
+fetch('./products.json')
+	.then(response => response.json())
+	.then(data => {
+		products = data
+
+		const coffee = products.filter(product => product.category === 'coffee')
+		const tea = products.filter(product => product.category === 'tea')
+		const dessert = products.filter(product => product.category === 'dessert')
+
+		renderCoffee(coffee)
+		renderTea(tea)
+		renderDessert(dessert)
+
+		function renderCoffee(products) {
+			cardContainer.innerHTML = ''
+
+			products.forEach((product, index) => {
+				const num = index + 1
+
+				const card = document.createElement('div')
+
+				card.classList.add('coffee__1-container')
+
+				card.innerHTML += ` <div class="coffee__${num}-img"></div>
+				 <div class="coffee__1-desc">
+                <h4>${product.name}</h4>
+                <p>${product.description}</p>
+                <span>$${product.price}</span>
+            </div>
+				`
+				cardContainer.append(card)
+			})
+		}
+
+		function renderTea(products) {
+			cardContainer.innerHTML = ''
+
+			products.forEach((product, index) => {
+				const num = index + 1
+
+				const card = document.createElement('div')
+
+				card.classList.add('coffee__1-container')
+
+				card.innerHTML += ` <div class="tea__${num}-img"></div>
+				 <div class="coffee__1-desc">
+                <h4>${product.name}</h4>
+                <p>${product.description}</p>
+                <span>$${product.price}</span>
+            </div>
+				`
+				cardContainer.append(card)
+			})
+		}
+
+		function renderDessert(products) {
+			cardContainer.innerHTML = ''
+
+			products.forEach((product, index) => {
+				const num = index + 1
+
+				const card = document.createElement('div')
+
+				card.classList.add('coffee__1-container')
+
+				card.innerHTML += ` <div class="dessert__${num}-img"></div>
+				 <div class="coffee__1-desc">
+                <h4>${product.name}</h4>
+                <p>${product.description}</p>
+                <span>$${product.price}</span>
+            </div>
+				`
+				cardContainer.append(card)
+			})
+		}
+
+		function setActive(button) {
+			coffeeBtn.classList.remove('active')
+			teaBtn.classList.remove('active')
+			dessertBtn.classList.remove('active')
+
+			button.classList.add('active')
+		}
+
+		coffeeBtn.addEventListener('click', () => {
+			setActive(coffeeBtn)
+			renderCoffee(coffee)
+		})
+		teaBtn.addEventListener('click', () => {
+			setActive(teaBtn)
+			renderTea(tea)
+		})
+		dessertBtn.addEventListener('click', () => {
+			setActive(dessertBtn)
+			renderDessert(dessert)
+		})
+	})
 
 themeSwitch.addEventListener('click', () => {
 	const isDark = document.body.classList.toggle('dark')

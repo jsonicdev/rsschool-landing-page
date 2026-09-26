@@ -104,12 +104,12 @@
 								</svg>
 							</a>
 						</div>
-						<div class="header__navbar">
+						<div class="header__navbar" id="menu">
 							<ul class="navbar__container">
-								<li><a href="#favorite">Favorite coffee</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#mobile">Mobile app</a></li>
-								<li><a href="#contacts">Contact us</a></li>
+								<li><a href="index.html#favorite">Favorite coffee</a></li>
+								<li><a href="index.html#about">About</a></li>
+								<li><a href="index.html#mobile">Mobile app</a></li>
+								<li><a href="index.html#contacts">Contact us</a></li>
 							</ul>
 						</div>
 						<div class="header__actions">
@@ -143,7 +143,7 @@
 									/>
 								</svg>
 							</div>
-							<div class="menu__burger">
+							<div class="menu__burger" id="burger">
 								<svg
 									width="18"
 									height="2"
@@ -168,6 +168,29 @@
 								>
 									<path
 										d="M0.75 0.75H16.75"
+										stroke="#403F3D"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+								</svg>
+								<svg
+									id="close"
+									width="13"
+									height="13"
+									viewBox="0 0 13 13"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M0.75 0.75L12.0637 12.0637"
+										stroke="#403F3D"
+										stroke-width="1.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<path
+										d="M0.75 12.0637L12.0637 0.750013"
 										stroke="#403F3D"
 										stroke-width="1.5"
 										stroke-linecap="round"
@@ -175,7 +198,7 @@
 									/>
 								</svg>
 							</div>
-							<div class="coffee__menu active">
+							<div class="coffee__menu">
 								<a href="menu.html" class="menu-link">
 									<h2>Menu</h2>
 									<svg
@@ -226,98 +249,19 @@
 						Behind each of our cups hides an <span>amazing surprise</span>
 					</h2>
 					<div class="category__choose">
-						<button class="coffee__btn">
+						<button class="coffee__btn" id="coffeeBtn">
 							<img src="assets/img/coffee.png" alt="coffee" />Coffee
 						</button>
-						<button class="tea__btn">
+						<button class="tea__btn" id="teaBtn">
 							<img src="assets/img/tea.png" alt="tea" />Tea
 						</button>
-						<button class="dessert__btn">
+						<button class="dessert__btn" id="dessertBtn">
 							<img src="assets/img/dessert.png" alt="dessert" />Dessert
 						</button>
 					</div>
 				</div>
 				<section class="menu__grid">
 					<div class="menu__grid-container">
-						<div class="menu__grid-top">
-							<div class="coffee__1-container">
-								<div class="coffee__1-img"></div>
-								<div class="coffee__1-desc">
-									<h4>Irish coffee</h4>
-									<p>
-										Fragrant black coffee with Jameson Irish whiskey and whipped
-										milk
-									</p>
-									<span>$7.00</span>
-								</div>
-							</div>
-							<div class="coffee__1-container">
-								<div class="coffee__2-img"></div>
-								<div class="coffee__1-desc">
-									<h4>Kahlua coffee</h4>
-									<p>
-										Classic coffee with milk and Kahlua liqueur under a cap of
-										frothed milk
-									</p>
-									<span>$7.00</span>
-								</div>
-							</div>
-							<div class="coffee__1-container">
-								<div class="coffee__3-img"></div>
-								<div class="coffee__1-desc">
-									<h4>Honey raf</h4>
-									<p>Espresso with frothed milk, cream and aromatic honey</p>
-									<span>$5.50</span>
-								</div>
-							</div>
-							<div class="coffee__1-container">
-								<div class="coffee__4-img"></div>
-								<div class="coffee__1-desc">
-									<h4>Ice cappuccino</h4>
-									<p>
-										Cappuccino with soft thick foam in summer version with ice
-									</p>
-									<span>$5.00</span>
-								</div>
-							</div>
-						</div>
-						<div class="menu__grid-low">
-							<div class="coffee__1-container">
-								<div class="coffee__5-img"></div>
-								<div class="coffee__1-desc">
-									<h4>Espresso</h4>
-									<p>Classic black coffee</p>
-									<span>$4.50</span>
-								</div>
-							</div>
-							<div class="coffee__1-container">
-								<div class="coffee__6-img"></div>
-								<div class="coffee__1-desc">
-									<h4>Latte</h4>
-									<p>
-										Espresso coffee with the addition of steamed milk and dense
-										milk foam
-									</p>
-									<span>$5.50</span>
-								</div>
-							</div>
-							<div class="coffee__1-container">
-								<div class="coffee__7-img"></div>
-								<div class="coffee__1-desc">
-									<h4>Latte macchiato</h4>
-									<p>Espresso with frothed milk and chocolate</p>
-									<span>$5.50</span>
-								</div>
-							</div>
-							<div class="coffee__1-container">
-								<div class="coffee__8-img"></div>
-								<div class="coffee__1-desc">
-									<h4>Coffee with cognac</h4>
-									<p>Fragrant black coffee with cognac and whipped cream</p>
-									<span>$6.50</span>
-								</div>
-							</div>
-						</div>
 						<div class="menu__grid-reload">
 							<svg
 								width="24"

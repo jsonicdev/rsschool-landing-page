@@ -772,32 +772,58 @@ body {
 	justify-content: center;
 	gap: 16px;
 }
+.coffee__btn.active {
+	background: var(--background-container);
+	color: var(--text-inverse);
+}
+.tea__btn.active {
+	background: var(--background-container);
+	color: var(--text-inverse);
+}
+.dessert__btn.active {
+	background: var(--background-container);
+	color: var(--text-inverse);
+}
 .coffee__btn {
 	display: flex;
+	border: 1px solid var(--border-primary);
 	border-radius: 100px;
 	padding: 8px 16px 8px 8px;
 	width: 115px;
 	height: 46px;
-	background: var(--background-container);
+	background: transparent;
 	list-style: none;
-	border: 0px;
 	font-family: var(--font-family);
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 150%;
-	color: var(--text-inverse);
+	color: var(--text-primary);
 	align-items: center;
 	cursor: pointer;
 }
 .coffee__btn img {
 	border-radius: 100px;
 	padding: 7px;
-	object-fit: cover;
-	background: var(--text-inverse);
+	background: var(--border-primary);
 	margin-right: 8px;
+	transition: background-color 1s ease;
 }
-.dark .coffee__btn img {
+.dark .dessert__btn:hover img {
 	background: var(--dark-bg-page);
+	transition: background-color 0.3s ease;
+}
+.dessert__btn:hover img {
+	background: var(--text-inverse);
+	transition: background-color 0.3s ease;
+}
+.dark .coffee__btn:hover {
+	background: var(--dark-bg-container);
+}
+.coffee__btn:hover {
+	background: var(--background-container);
+	color: var(--text-inverse);
+	border: 1px solid var(--background-container);
+	transition: background-color 0.3s ease;
 }
 
 .tea__btn {
@@ -888,16 +914,8 @@ body {
 	margin-top: 40px;
 }
 .menu__grid-container {
-	display: flex;
-	flex-direction: column;
-	gap: 40px;
-}
-.menu__grid-top {
-	display: flex;
-	gap: 40px;
-}
-.menu__grid-low {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	gap: 40px;
 }
 
@@ -1051,6 +1069,176 @@ body {
 	transition: background-size 0.4s ease;
 }
 .coffee__1-container:hover .coffee__8-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+
+.tea__1-img {
+	width: 308px;
+	height: 340px;
+	background-image: url('assets/img/tea/tea-1.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.tea__2-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/tea/tea-2.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.tea__3-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/tea/tea-3.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.tea__4-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/tea/tea-4.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .tea__1-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .tea__2-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .tea__3-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .tea__4-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+
+.dessert__1-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/dessert/dessert-1.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.dessert__2-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/dessert/dessert-2.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.dessert__3-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/dessert/dessert-3.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.dessert__4-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/dessert/dessert-4.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.dessert__5-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/dessert/dessert-5.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.dessert__6-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/dessert/dessert-6.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.dessert__7-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/dessert/dessert-7.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.dessert__8-img {
+	width: 308px;
+	height: 310px;
+	background-image: url('assets/img/dessert/dessert-8.png');
+	background-size: 110%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 40px;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .dessert__1-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .dessert__2-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .dessert__3-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .dessert__4-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .dessert__5-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .dessert__6-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .dessert__7-img {
+	background-size: 100%;
+	transition: background-size 0.4s ease;
+}
+.coffee__1-container:hover .dessert__8-img {
 	background-size: 100%;
 	transition: background-size 0.4s ease;
 }
