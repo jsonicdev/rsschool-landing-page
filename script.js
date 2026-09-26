@@ -5,3 +5,10 @@ themeSwitch.addEventListener('click', () => {
 
 	localStorage.setItem('theme', isDark ? 'dark' : 'light')
 })
+
+const burger = document.getElementById('burger')
+const menu = document.getElementById('menu')
+
+burger.addEventListener('click', () => {
+	menu.classList.toggle('active')
+})

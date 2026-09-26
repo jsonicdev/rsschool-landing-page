@@ -1106,6 +1106,10 @@ body {
 .menu__grid-reload {
 	display: none;
 }
+
+#close {
+	display: none;
+}
 /* MEDIA QUERIES */
 
 @media (max-width: 768px) {
@@ -1117,10 +1121,70 @@ body {
 		margin: 20px 40px 0 40px;
 	}
 	.header__navbar {
+		position: absolute;
+		top: 80px;
+		left: 0;
+		width: 100%;
+
 		display: none;
+		flex-direction: column;
+		padding: 20px;
+	}
+	.dark .header__navbar.active {
+		background-color: var(--dark-bg-page);
+	}
+	.header__navbar.active {
+		display: flex;
+		height: 100vh;
+		background: var(--text-inverse);
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 125%;
+		text-align: center;
+		color: var(--text-primary);
+	}
+	.header__navbar.active .navbar__container {
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 25%;
+	}
+	.header__navbar.active .navbar__container li {
+		padding: 20px;
+		margin: 0;
 	}
 	.coffee__menu {
+		position: absolute;
+		bottom: 130px;
+		left: 0;
+		width: 100%;
 		display: none;
+		flex-direction: column;
+		padding: 20px;
+	}
+	.coffee__menu a h2 {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 125%;
+		text-align: center;
+		color: var(--text-primary);
+	}
+	body:has(.header__navbar.active) #close {
+		display: block;
+		transition: fill 0.5s;
+	}
+	body:has(.header__navbar.active) .menu__burger svg {
+		display: none;
+		transition: fill 0.5s;
+	}
+	body:has(.header__navbar.active) .coffee__menu {
+		display: flex;
+		transition: fill 0.5s;
+	}
+	body:has(.header__navbar.active) .coffee__menu svg {
+		width: 35px;
+		height: 35px;
 	}
 	.header__menu {
 		gap: 20px;
