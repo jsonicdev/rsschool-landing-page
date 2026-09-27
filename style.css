@@ -305,6 +305,19 @@ body {
 .slide.active {
 	display: block;
 }
+.slide.fade {
+	animation: fade 1s ease;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
 .slider__content h3 {
 	font-family: var(--font-family);
 	font-weight: 600;
@@ -1462,13 +1475,27 @@ body {
 		display: block;
 		border: 1px solid var(--background-container);
 		border-radius: 100px;
+		background-color: transparent;
 		width: 60px;
 		height: 60px;
 		padding: 16px 17px;
-		margin: 0 auto;
+		margin: 40px auto;
+		cursor: pointer;
+	}
+	.menu__grid-reload.deactive {
+		display: none;
 	}
 	.category__choose {
 		gap: 15px;
+	}
+	.menu__grid-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.menu__grid-container > :nth-child(n + 5) {
+		display: none;
+	}
+	.menu__grid-container.show > :nth-child(n + 5) {
+		display: block;
 	}
 }
 
